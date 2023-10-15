@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Gerador de senha, Gerador password">
+    <title>GERADOR DE SENHA</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            background-image: url('./imagens/fundo.png');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .background {   
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="background">
+        <div class="login-container">
+            <div class="overlay"></div>
+            <div class="container">
+                <div class="centered-div">
+                    <main class="container-input">
+                        <span>Tamanho Caracteres: <span id="valor"></span></span>
+                        <input id="slide" class="slide" type="range" min="5" max="25" value="15" placeholder="Escolha o tamanho da senha">
+                        <button id="button" class="button-cta" title="Clique para gerar senha">Gerar senha</button>
+                    </main>
+
+                    <div id="container-password" class="container-password hide">
+                        <span class="title">Sua senha gerada foi:</span>
+                        <span id="password" class="password"></span>
+                        <button id="copyButton" class="copy-button" onclick="copyToClipboard()">Copiar senha</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/script.js"></script>
+</body>
+</html>
